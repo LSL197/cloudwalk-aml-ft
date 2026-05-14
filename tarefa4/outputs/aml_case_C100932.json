@@ -1,0 +1,413 @@
+{
+  "customer_id": "C100932",
+  "timestamp": "2026-05-12T20:27:28.589735",
+  "total_segundos": 92.2,
+  "pipeline_log": [
+    {
+      "agente": "DADOS",
+      "elapsed_s": 6.4,
+      "keys": [
+        "customer_id",
+        "perfil_resumido",
+        "kyc_highlights",
+        "transacoes_highlights",
+        "dados_estruturados",
+        "nivel_dados"
+      ]
+    },
+    {
+      "agente": "DETECCAO",
+      "elapsed_s": 12.5,
+      "keys": [
+        "decisao",
+        "score_deteccao",
+        "flags_acionadas",
+        "tipologias_identificadas",
+        "justificativa",
+        "urgencia",
+        "proximo_passo"
+      ]
+    },
+    {
+      "agente": "INVESTIGACAO",
+      "elapsed_s": 23.1,
+      "keys": [
+        "tipologia_principal",
+        "tipologias_secundarias",
+        "narrativa_investigativa",
+        "linha_do_tempo",
+        "evidencias_fortes",
+        "evidencias_fracas",
+        "rede_suspeita",
+        "lacunas_investigativas",
+        "recomendacao_sar",
+        "fundamentacao_legal"
+      ]
+    },
+    {
+      "agente": "SAR",
+      "elapsed_s": 33.8,
+      "keys": [
+        "sar_numero",
+        "data_emissao",
+        "classificacao",
+        "secao_1_identificacao",
+        "secao_2_resumo_executivo",
+        "secao_3_descricao_operacoes",
+        "secao_4_tipologia",
+        "secao_5_fundamentacao_legal",
+        "secao_6_evidencias",
+        "secao_7_medidas_tomadas",
+        "secao_8_conclusao",
+        "grau_certeza",
+        "prazo_comunicacao_coaf"
+      ]
+    },
+    {
+      "agente": "COMPLIANCE",
+      "elapsed_s": 16.5,
+      "keys": [
+        "decisao_final",
+        "score_compliance",
+        "avaliacao_evidencias",
+        "pontos_fortes",
+        "pontos_fracos",
+        "ressalvas",
+        "risco_nao_reportar",
+        "risco_reportar_sem_base",
+        "prazo_acao",
+        "instrucoes_finais",
+        "checklist_coaf"
+      ]
+    }
+  ],
+  "perfil": {
+    "customer_id": "C100932",
+    "perfil_resumido": "O cliente C100932 é uma pessoa física com renda anual de R$ 6.706,00, ocupação de enfermeira e classificado como de baixo risco. No entanto, apresenta um histórico de transações que chamam atenção, incluindo uma transação de R$ 15.700,29 via PIX e uma transação internacional para os EUA.",
+    "kyc_highlights": [
+      "Renda anual de R$ 6.706,00",
+      "Ocupação de enfermeira",
+      "Classificado como de baixo risco",
+      "PEP (Pessoa Exponencialmente Política) sim",
+      "Não é proprietário benéfico"
+    ],
+    "transacoes_highlights": [
+      "Transação de R$ 15.700,29 via PIX",
+      "Transação internacional para os EUA",
+      "Uso de VPN em uma transação",
+      "5 transações internacionais",
+      "1 transação estruturada"
+    ],
+    "dados_estruturados": {
+      "kyc": {
+        "customer_id": "C100932",
+        "full_name": "Customer 933",
+        "annual_income_brl": "6706.0",
+        "declared_occupation": "Nurse",
+        "risk_rating": "Low",
+        "pep": "Yes",
+        "sanctions_list_hit": "No",
+        "kyc_risk_score": "59.0",
+        "beneficial_owner": "No",
+        "country": "BR"
+      },
+      "transactions_summary": {
+        "total_txs": 41,
+        "total_volume_brl": 162041.46,
+        "max_tx_brl": 15700.29,
+        "rails_used": [
+          "PIX",
+          "Card"
+        ],
+        "n_sanctions_hits": 0,
+        "n_vpn_txs": 2,
+        "n_crossborder": 5,
+        "n_struct_txs": 1,
+        "date_range": "2025-07-01T01:12:49 → 2025-10-02T13:27:51"
+      },
+      "top_transactions": [
+        {
+          "transaction_id": "T338XP8YHAP1I",
+          "amount_brl": 15700.29,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-07-23T06:29:47"
+        },
+        {
+          "transaction_id": "TIZ41ABJFDD9Q",
+          "amount_brl": 14464.48,
+          "transaction_type": "Card",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-08-21T06:32:21"
+        },
+        {
+          "transaction_id": "T2JRBS52QQN52",
+          "amount_brl": 12479.61,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-08-23T00:51:48"
+        },
+        {
+          "transaction_id": "TFRUFHNP4ELAS",
+          "amount_brl": 12167.96,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "VPN",
+          "timestamp": "2025-07-11T04:32:43"
+        },
+        {
+          "transaction_id": "TK40D8Y1FHTMB",
+          "amount_brl": 10860.73,
+          "transaction_type": "PIX",
+          "geo_country": "US",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-08-04T02:20:55"
+        }
+      ],
+      "ml_score": {
+        "final_score": 0.9557700630725168,
+        "risk_tier": "CRITICAL",
+        "xgb_prob": 0.99972624,
+        "iso_score": 0.8532056797546617,
+        "max_income_ratio": 28.09,
+        "min_geojump_min": 29.65,
+        "n_geojumps": 1
+      }
+    },
+    "nivel_dados": "completo"
+  },
+  "deteccao": {
+    "decisao": "INVESTIGAR",
+    "score_deteccao": 95,
+    "flags_acionadas": [
+      {
+        "flag": "Income Ratio",
+        "evidencia": "Transação de R$ 15.700,29 via PIX, incompatível com renda anual declarada de R$ 6.706,00",
+        "peso": "ALTO"
+      },
+      {
+        "flag": "Geo-jump",
+        "evidencia": "Transação internacional para os EUA, com possibilidade de geo-jump",
+        "peso": "MEDIO"
+      },
+      {
+        "flag": "VPN/Tor",
+        "evidencia": "Uso de VPN em uma transação, indicando ocultação de identidade",
+        "peso": "ALTO"
+      },
+      {
+        "flag": "Structuring/Smurfing",
+        "evidencia": "Transação estruturada, com valor abaixo de R$ 10k",
+        "peso": "BAIXO"
+      }
+    ],
+    "tipologias_identificadas": [
+      "Income Ratio",
+      "Geo-jump",
+      "VPN/Tor",
+      "Structuring/Smurfing"
+    ],
+    "justificativa": "O cliente C100932 apresenta várias flags de risco, incluindo uma transação de alto valor via PIX, incompatível com sua renda anual declarada. Além disso, há evidências de uso de VPN e transações internacionais, o que pode indicar atividades ilícitas. O score de detecção é alto, o que justifica a investigação aprofundada.",
+    "urgencia": "IMEDIATA",
+    "proximo_passo": "Verificar a documentação do cliente e realizar uma análise mais detalhada das transações para determinar se há atividades ilícitas em andamento."
+  },
+  "investigacao": {
+    "tipologia_principal": "Lavagem de Dinheiro por meio de Transações Financeiras",
+    "tipologias_secundarias": [
+      "Estruturação de Transações",
+      "Uso de VPN/Tor para Ocultar Identidade",
+      "Transações Internacionais Suspeitas"
+    ],
+    "narrativa_investigativa": "A investigação sobre o cliente C100932 revelou uma série de transações financeiras suspeitas que sugerem a possibilidade de lavagem de dinheiro. O cliente, classificado como de baixo risco, apresenta um histórico de transações que chamam atenção, incluindo uma transação de R$ 15.700,29 via PIX e uma transação internacional para os EUA. Além disso, o uso de VPN em uma transação e a presença de transações estruturadas sugerem que o cliente pode estar tentando ocultar sua identidade e evitar a detecção de atividades ilícitas. A análise da linha do tempo das transações suspeitas revelou um padrão de comportamento recorrente e sistemático, com transações frequentes e valores significativos. A rede de relacionamentos do cliente inclui várias pessoas e empresas, o que pode indicar a existência de uma rede de lavagem de dinheiro. As evidências fortes incluem a transação de R$ 15.700,29 via PIX, o uso de VPN em uma transação e a presença de transações estruturadas. No entanto, as evidências fracas incluem a falta de informações sobre a ocupação e o risco dos receptores das transações. Em resumo, a investigação sugere que o cliente C100932 pode estar envolvido em atividades de lavagem de dinheiro e que é necessário realizar uma investigação mais aprofundada para determinar a extensão das atividades ilícitas.",
+    "linha_do_tempo": [
+      {
+        "data": "2025-07-01T01:12:49",
+        "evento": "Transação de R$ 1.571,76 via PIX",
+        "relevancia": "BAIXA"
+      },
+      {
+        "data": "2025-07-11T04:32:43",
+        "evento": "Transação de R$ 12.167,96 via PIX com uso de VPN",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-07-23T06:29:47",
+        "evento": "Transação de R$ 15.700,29 via PIX",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-08-04T02:20:55",
+        "evento": "Transação internacional para os EUA",
+        "relevancia": "ALTA"
+      }
+    ],
+    "evidencias_fortes": [
+      "Transação de R$ 15.700,29 via PIX",
+      "Uso de VPN em uma transação",
+      "Presença de transações estruturadas"
+    ],
+    "evidencias_fracas": [
+      "Falta de informações sobre a ocupação e o risco dos receptores das transações"
+    ],
+    "rede_suspeita": {
+      "nos": [
+        "C100932",
+        "M200021",
+        "M200549",
+        "M200932"
+      ],
+      "conexoes": [
+        {
+          "origem": "C100932",
+          "destino": "M200021",
+          "valor": "R$ 10.500,54"
+        },
+        {
+          "origem": "C100932",
+          "destino": "M200549",
+          "valor": "R$ 12.167,96"
+        },
+        {
+          "origem": "C100932",
+          "destino": "M200932",
+          "valor": "R$ 15.700,29"
+        }
+      ]
+    },
+    "lacunas_investigativas": [
+      "Informações sobre a ocupação e o risco dos receptores das transações",
+      "Detalhes sobre a transação internacional para os EUA"
+    ],
+    "recomendacao_sar": "EMITIR",
+    "fundamentacao_legal": [
+      "Lei nº 9.613/98 - Lei da Lavagem de Dinheiro",
+      "Resolução nº 4.434/15 - Resolução do Conselho Monetário Nacional sobre a Prevenção à Lavagem de Dinheiro"
+    ]
+  },
+  "sar": {
+    "sar_numero": "SAR-2026-05-AUTO",
+    "data_emissao": "2026-05-12",
+    "classificacao": "CONFIDENCIAL",
+    "secao_1_identificacao": {
+      "sujeito_obrigado": "CloudWalk Payments",
+      "cnpj_sujeito": "09.173.490/0001-50",
+      "responsavel_compliance": "Departamento AML/FT",
+      "cliente_id": "C100932",
+      "nome_cliente": "Customer 933",
+      "cpf_cnpj": "Não informado",
+      "ocupacao": "Enfermeira",
+      "renda_declarada": "R$ 6.706,00"
+    },
+    "secao_2_resumo_executivo": "O cliente C100932 apresenta um histórico de transações financeiras suspeitas, incluindo uma transação de R$ 15.700,29 via PIX e uma transação internacional para os EUA. Além disso, o uso de VPN em uma transação e a presença de transações estruturadas sugerem que o cliente pode estar tentando ocultar sua identidade e evitar a detecção de atividades ilícitas.",
+    "secao_3_descricao_operacoes": {
+      "periodo": "2025-07-01 a 2025-10-02",
+      "volume_total": "R$ 162.041,46",
+      "numero_operacoes": 41,
+      "operacoes_criticas": [
+        {
+          "id": "T338XP8YHAP1I",
+          "data": "2025-07-23T06:29:47",
+          "valor": "R$ 15.700,29",
+          "descricao": "Transação via PIX",
+          "red_flag": "Transação de alto valor incompatível com renda declarada"
+        },
+        {
+          "id": "TFRUFHNP4ELAS",
+          "data": "2025-07-11T04:32:43",
+          "valor": "R$ 12.167,96",
+          "descricao": "Transação via PIX com uso de VPN",
+          "red_flag": "Uso de VPN para ocultar identidade"
+        },
+        {
+          "id": "TK40D8Y1FHTMB",
+          "data": "2025-08-04T02:20:55",
+          "valor": "R$ 10.860,73",
+          "descricao": "Transação internacional para os EUA",
+          "red_flag": "Transação internacional suspeita"
+        }
+      ]
+    },
+    "secao_4_tipologia": {
+      "tipologia_principal": "Lavagem de Dinheiro por meio de Transações Financeiras",
+      "descricao_tipologia": "O cliente C100932 apresenta um histórico de transações financeiras suspeitas que sugerem a possibilidade de lavagem de dinheiro.",
+      "fase_ld": "Placement",
+      "base_fatf": "FATF Recomendação 1"
+    },
+    "secao_5_fundamentacao_legal": [
+      {
+        "norma": "Lei nº 9.613/98",
+        "artigo": "Art. 1º",
+        "aplicacao": "Definição de lavagem de dinheiro"
+      },
+      {
+        "norma": "Resolução nº 4.434/15",
+        "artigo": "Art. 1º",
+        "aplicacao": "Prevenção à lavagem de dinheiro"
+      }
+    ],
+    "secao_6_evidencias": {
+      "evidencias_objetivas": [
+        "Transação de R$ 15.700,29 via PIX",
+        "Uso de VPN em uma transação",
+        "Presença de transações estruturadas"
+      ],
+      "documentos_anexos": [
+        "Cópia da identidade do cliente",
+        "Cópia da declaração de renda do cliente",
+        "Relatório de transações do cliente"
+      ],
+      "lacunas": [
+        "Informações sobre a ocupação e o risco dos receptores das transações",
+        "Detalhes sobre a transação internacional para os EUA"
+      ]
+    },
+    "secao_7_medidas_tomadas": [
+      "Verificação da documentação do cliente",
+      "Análise mais detalhada das transações do cliente",
+      "Comunicação ao COAF"
+    ],
+    "secao_8_conclusao": "O cliente C100932 apresenta um histórico de transações financeiras suspeitas que sugerem a possibilidade de lavagem de dinheiro. Recomenda-se a emissão de um SAR e a comunicação ao COAF para que sejam tomadas as medidas necessárias para prevenir e combater a lavagem de dinheiro.",
+    "grau_certeza": "ALTO",
+    "prazo_comunicacao_coaf": "24h"
+  },
+  "compliance": {
+    "decisao_final": "APROVADO_COM_RESSALVAS",
+    "score_compliance": 85,
+    "avaliacao_evidencias": "SUFICIENTE",
+    "pontos_fortes": [
+      "Evidências fortes de transações suspeitas",
+      "Uso de VPN em uma transação",
+      "Presença de transações estruturadas",
+      "Fundamentação legal correta"
+    ],
+    "pontos_fracos": [
+      "Falta de informações sobre a ocupação e o risco dos receptores das transações",
+      "Detalhes sobre a transação internacional para os EUA não estão claros"
+    ],
+    "ressalvas": [
+      "Adicionar mais informações sobre a ocupação e o risco dos receptores das transações",
+      "Incluir detalhes sobre a transação internacional para os EUA",
+      "Verificar se as transações estruturadas estão de acordo com as normas regulatórias"
+    ],
+    "risco_nao_reportar": "ALTO",
+    "risco_reportar_sem_base": "BAIXO",
+    "prazo_acao": "24h",
+    "instrucoes_finais": "A equipe deve revisar e complementar as informações faltantes antes de submeter o SAR ao COAF. Além disso, é importante verificar se as transações estruturadas estão de acordo com as normas regulatórias e se há alguma outra informação relevante que possa ser adicionada ao SAR.",
+    "checklist_coaf": {
+      "identificacao_completa": true,
+      "descricao_operacoes": true,
+      "tipologia_identificada": true,
+      "fundamentacao_legal": true,
+      "medidas_tomadas": true,
+      "prazo_comunicacao": true
+    }
+  }
+}

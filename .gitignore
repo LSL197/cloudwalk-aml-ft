@@ -1,0 +1,22 @@
+# Banco de dados (pesado, não versionar)
+aml.db
+*.db
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Credenciais
+*.key
+.env

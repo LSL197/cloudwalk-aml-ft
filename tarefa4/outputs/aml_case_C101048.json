@@ -1,0 +1,428 @@
+{
+  "customer_id": "C101048",
+  "timestamp": "2026-05-12T20:26:30.581463",
+  "total_segundos": 56.0,
+  "pipeline_log": [
+    {
+      "agente": "DADOS",
+      "elapsed_s": 3.5,
+      "keys": [
+        "customer_id",
+        "perfil_resumido",
+        "kyc_highlights",
+        "transacoes_highlights",
+        "dados_estruturados",
+        "nivel_dados"
+      ]
+    },
+    {
+      "agente": "DETECCAO",
+      "elapsed_s": 1.6,
+      "keys": [
+        "decisao",
+        "score_deteccao",
+        "flags_acionadas",
+        "tipologias_identificadas",
+        "justificativa",
+        "urgencia",
+        "proximo_passo"
+      ]
+    },
+    {
+      "agente": "INVESTIGACAO",
+      "elapsed_s": 13.2,
+      "keys": [
+        "tipologia_principal",
+        "tipologias_secundarias",
+        "narrativa_investigativa",
+        "linha_do_tempo",
+        "evidencias_fortes",
+        "evidencias_fracas",
+        "rede_suspeita",
+        "lacunas_investigativas",
+        "recomendacao_sar",
+        "fundamentacao_legal"
+      ]
+    },
+    {
+      "agente": "SAR",
+      "elapsed_s": 14.0,
+      "keys": [
+        "sar_numero",
+        "data_emissao",
+        "classificacao",
+        "secao_1_identificacao",
+        "secao_2_resumo_executivo",
+        "secao_3_descricao_operacoes",
+        "secao_4_tipologia",
+        "secao_5_fundamentacao_legal",
+        "secao_6_evidencias",
+        "secao_7_medidas_tomadas",
+        "secao_8_conclusao",
+        "grau_certeza",
+        "prazo_comunicacao_coaf"
+      ]
+    },
+    {
+      "agente": "COMPLIANCE",
+      "elapsed_s": 23.8,
+      "keys": [
+        "decisao_final",
+        "score_compliance",
+        "avaliacao_evidencias",
+        "pontos_fortes",
+        "pontos_fracos",
+        "ressalvas",
+        "risco_nao_reportar",
+        "risco_reportar_sem_base",
+        "prazo_acao",
+        "instrucoes_finais",
+        "checklist_coaf"
+      ]
+    }
+  ],
+  "perfil": {
+    "customer_id": "C101048",
+    "perfil_resumido": "O cliente C101048 é um mecânico brasileiro com renda anual de R$ 13.616,00, classificado como de risco médio e com um histórico de transações que apresenta alguns padrões suspeitos. O cliente é considerado uma pessoa politicamente exposta (PEP) e tem um escore de risco de 82,0 no KYC.",
+    "kyc_highlights": [
+      "Risco médio",
+      "PEP (Pessoa Politicamente Exposta)",
+      "Escore de risco de 82,0",
+      "Não é proprietário benéfico"
+    ],
+    "transacoes_highlights": [
+      "Transações com valores elevados (até R$ 25.085,71)",
+      "Uso de diferentes canais de pagamento (PIX, Cartão e Transferência)",
+      "Transações internacionais (7 transações)",
+      "Uso de VPN/Tor em algumas transações (3 transações)"
+    ],
+    "dados_estruturados": {
+      "kyc": {
+        "customer_id": "C101048",
+        "full_name": "Customer 1049",
+        "annual_income_brl": "13616.0",
+        "declared_occupation": "Mechanic",
+        "risk_rating": "Medium",
+        "pep": "Yes",
+        "sanctions_list_hit": "No",
+        "kyc_risk_score": "82.0",
+        "beneficial_owner": "No",
+        "country": "BR"
+      },
+      "transactions_summary": {
+        "total_txs": 34,
+        "total_volume_brl": 169667.43,
+        "max_tx_brl": 25085.71,
+        "rails_used": [
+          "PIX",
+          "Card",
+          "Wire"
+        ],
+        "n_sanctions_hits": 0,
+        "n_vpn_txs": 3,
+        "n_crossborder": 7,
+        "n_struct_txs": 0,
+        "date_range": "2025-07-02T12:51:29 → 2025-10-03T00:13:19"
+      },
+      "top_transactions": [
+        {
+          "transaction_id": "T0JMUA3ZVX2TS",
+          "amount_brl": 25085.71,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-08-03T21:20:37"
+        },
+        {
+          "transaction_id": "TRF6VVABS3WRO",
+          "amount_brl": 24128.51,
+          "transaction_type": "Card",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "Tor",
+          "timestamp": "2025-07-02T23:18:30"
+        },
+        {
+          "transaction_id": "TD33WJQALVTH1",
+          "amount_brl": 19500.17,
+          "transaction_type": "Card",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-08-19T12:44:06"
+        },
+        {
+          "transaction_id": "TQY33S7G330FU",
+          "amount_brl": 15232.78,
+          "transaction_type": "Card",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-07-16T16:11:59"
+        },
+        {
+          "transaction_id": "TUWUZSDMDG0C2",
+          "amount_brl": 12105.51,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-07-02T16:17:45"
+        }
+      ],
+      "ml_score": {
+        "final_score": 0.9993632316589356,
+        "risk_tier": "CRITICAL",
+        "xgb_prob": 0.9990903,
+        "iso_score": 1.0,
+        "max_income_ratio": 22.11,
+        "min_geojump_min": 2.33,
+        "n_geojumps": 5
+      }
+    },
+    "nivel_dados": "completo"
+  },
+  "deteccao": {
+    "decisao": "INVESTIGAR",
+    "score_deteccao": 95,
+    "flags_acionadas": [
+      {
+        "flag": "PEP",
+        "evidencia": "O cliente é considerado uma pessoa politicamente exposta (PEP)",
+        "peso": "ALTO"
+      },
+      {
+        "flag": "Income Ratio",
+        "evidencia": "Transações com valores elevados (até R$ 25.085,71) incompatíveis com a renda declarada de R$ 13.616,00",
+        "peso": "ALTO"
+      },
+      {
+        "flag": "Geo-jump",
+        "evidencia": "Transações internacionais (7 transações) e uso de VPN/Tor em algumas transações (3 transações)",
+        "peso": "MEDIO"
+      },
+      {
+        "flag": "VPN/Tor",
+        "evidencia": "Uso de VPN/Tor em algumas transações de alto valor",
+        "peso": "MEDIO"
+      },
+      {
+        "flag": "ML Score",
+        "evidencia": "Score de risco de 0,9993632316589356, classificado como CRITICAL",
+        "peso": "ALTO"
+      }
+    ],
+    "tipologias_identificadas": [
+      "Income Ratio",
+      "Geo-jump",
+      "VPN/Tor"
+    ],
+    "justificativa": "O cliente apresenta várias flags de risco, incluindo ser uma pessoa politicamente exposta (PEP), ter um histórico de transações com valores elevados incompatíveis com a renda declarada, realizar transações internacionais e usar VPN/Tor em algumas transações. Além disso, o score de risco do modelo de machine learning é muito alto, indicando um risco crítico. Portanto, é necessário investigar mais a fundo para determinar se o cliente está envolvido em atividades ilícitas.",
+    "urgencia": "IMEDIATA",
+    "proximo_passo": "Realizar uma análise mais detalhada das transações do cliente, incluindo a verificação de documentos e a realização de entrevistas com o cliente e outras partes envolvidas. Além disso, é necessário notificar as autoridades competentes sobre as suspeitas de lavagem de dinheiro e financiamento ao terrorismo."
+  },
+  "investigacao": {
+    "tipologia_principal": "Lavagem de Dinheiro - Tipologia 1: Introdução de Ativos Ilícitos no Sistema Financeiro",
+    "tipologias_secundarias": [
+      "Lavagem de Dinheiro - Tipologia 2: Transferência de Ativos Ilícitos",
+      "Lavagem de Dinheiro - Tipologia 3: Uso de VPN/Tor para Ocultar Identidade"
+    ],
+    "narrativa_investigativa": "A investigação iniciou-se com a detecção de transações suspeitas realizadas pelo cliente C101048, um mecânico brasileiro com renda anual de R$ 13.616,00. O cliente é considerado uma pessoa politicamente exposta (PEP) e tem um escore de risco de 82,0 no KYC. As transações suspeitas incluem valores elevados (até R$ 25.085,71) e uso de diferentes canais de pagamento (PIX, Cartão e Transferência). Além disso, foram detectadas transações internacionais (7 transações) e uso de VPN/Tor em algumas transações (3 transações). A análise da linha do tempo das transações suspeitas revelou um padrão de comportamento recorrente e sistemático, com transações realizadas em intervalos regulares. A rede de relacionamentos do cliente inclui várias pessoas e empresas, mas não foi possível identificar uma conexão clara entre elas. A tipologia exata segundo FATF/COAF é a Lavagem de Dinheiro - Tipologia 1: Introdução de Ativos Ilícitos no Sistema Financeiro, com tipologias secundárias de Transferência de Ativos Ilícitos e Uso de VPN/Tor para Ocultar Identidade. As evidências fortes incluem as transações suspeitas, o uso de VPN/Tor e a classificação do cliente como PEP. No entanto, há lacunas de informação que precisam ser investigadas, incluindo a origem dos fundos e a conexão entre as transações.",
+    "linha_do_tempo": [
+      {
+        "data": "2025-07-02T12:51:29",
+        "evento": "Transação de R$ 2.695,00 para o receptor M200940",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-07-02T16:17:45",
+        "evento": "Transação de R$ 12.105,51 para o receptor M200057",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-07-02T23:18:30",
+        "evento": "Transação de R$ 24.128,51 para o receptor M200075",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-07-06T07:29:38",
+        "evento": "Transação de R$ 966,55 para o receptor M200547",
+        "relevancia": "MEDIA"
+      },
+      {
+        "data": "2025-07-08T12:28:14",
+        "evento": "Transação de R$ 6.448,31 para o receptor M200806",
+        "relevancia": "MEDIA"
+      }
+    ],
+    "evidencias_fortes": [
+      "Transações suspeitas com valores elevados",
+      "Uso de VPN/Tor em algumas transações",
+      "Classificação do cliente como PEP",
+      "Transações internacionais"
+    ],
+    "evidencias_fracas": [
+      "Falta de informação sobre a origem dos fundos",
+      "Conexão entre as transações não clara"
+    ],
+    "rede_suspeita": {
+      "nos": [
+        "C101048",
+        "M200940",
+        "M200057",
+        "M200075",
+        "M200547",
+        "M200806"
+      ],
+      "conexoes": [
+        {
+          "origem": "C101048",
+          "destino": "M200940",
+          "valor": "R$ 2.695,00"
+        },
+        {
+          "origem": "C101048",
+          "destino": "M200057",
+          "valor": "R$ 12.105,51"
+        },
+        {
+          "origem": "C101048",
+          "destino": "M200075",
+          "valor": "R$ 24.128,51"
+        },
+        {
+          "origem": "C101048",
+          "destino": "M200547",
+          "valor": "R$ 966,55"
+        },
+        {
+          "origem": "C101048",
+          "destino": "M200806",
+          "valor": "R$ 6.448,31"
+        }
+      ]
+    },
+    "lacunas_investigativas": [
+      "Origem dos fundos",
+      "Conexão entre as transações",
+      "Informação sobre os receptores das transações"
+    ],
+    "recomendacao_sar": "EMITIR",
+    "fundamentacao_legal": [
+      "Lei nº 9.613, de 3 de março de 1998 (Lei de Lavagem de Dinheiro)",
+      "Resolução nº 4.434, de 30 de julho de 2015 (Resolução do Banco Central do Brasil sobre Lavagem de Dinheiro)"
+    ]
+  },
+  "sar": {
+    "sar_numero": "SAR-2026-05-AUTO",
+    "data_emissao": "2026-05-12",
+    "classificacao": "CONFIDENCIAL",
+    "secao_1_identificacao": {
+      "sujeito_obrigado": "CloudWalk Payments",
+      "cnpj_sujeito": "09.173.490/0001-50",
+      "responsavel_compliance": "Departamento AML/FT",
+      "cliente_id": "C101048",
+      "nome_cliente": "Customer 1049",
+      "cpf_cnpj": "Não informado",
+      "ocupacao": "Mecânico",
+      "renda_declarada": "R$ 13.616,00"
+    },
+    "secao_2_resumo_executivo": "O cliente C101048, um mecânico brasileiro com renda anual de R$ 13.616,00, apresentou transações suspeitas com valores elevados e uso de diferentes canais de pagamento. Além disso, o cliente é considerado uma pessoa politicamente exposta (PEP) e tem um escore de risco de 82,0 no KYC. As transações suspeitas incluem valores elevados (até R$ 25.085,71) e uso de VPN/Tor em algumas transações.",
+    "secao_3_descricao_operacoes": {
+      "periodo": "2025-07-02 a 2025-10-03",
+      "volume_total": "R$ 169.667,43",
+      "numero_operacoes": "34",
+      "operacoes_criticas": [
+        {
+          "id": "T0JMUA3ZVX2TS",
+          "data": "2025-08-03T21:20:37",
+          "valor": "R$ 25.085,71",
+          "descricao": "Transação de PIX",
+          "red_flag": "Valor elevado"
+        },
+        {
+          "id": "TRF6VVABS3WRO",
+          "data": "2025-07-02T23:18:30",
+          "valor": "R$ 24.128,51",
+          "descricao": "Transação de Cartão",
+          "red_flag": "Uso de Tor"
+        }
+      ]
+    },
+    "secao_4_tipologia": {
+      "tipologia_principal": "Lavagem de Dinheiro - Tipologia 1: Introdução de Ativos Ilícitos no Sistema Financeiro",
+      "descricao_tipologia": "O cliente apresentou transações suspeitas com valores elevados e uso de diferentes canais de pagamento, indicando uma possível introdução de ativos ilícitos no sistema financeiro.",
+      "fase_ld": "Placement",
+      "base_fatf": "FATF Recomendação 1"
+    },
+    "secao_5_fundamentacao_legal": [
+      {
+        "norma": "Lei nº 9.613, de 3 de março de 1998",
+        "artigo": "Art. 1º",
+        "aplicacao": "Lavagem de Dinheiro"
+      },
+      {
+        "norma": "Resolução nº 4.434, de 30 de julho de 2015",
+        "artigo": "Art. 1º",
+        "aplicacao": "Lavagem de Dinheiro"
+      }
+    ],
+    "secao_6_evidencias": {
+      "evidencias_objetivas": [
+        "Transações suspeitas com valores elevados",
+        "Uso de VPN/Tor em algumas transações",
+        "Classificação do cliente como PEP"
+      ],
+      "documentos_anexos": [
+        "Relatório de Transações",
+        "Relatório de Risco do Cliente"
+      ],
+      "lacunas": [
+        "Origem dos fundos",
+        "Conexão entre as transações"
+      ]
+    },
+    "secao_7_medidas_tomadas": [
+      "Análise detalhada das transações do cliente",
+      "Verificação de documentos do cliente",
+      "Entrevista com o cliente"
+    ],
+    "secao_8_conclusao": "O cliente C101048 apresentou transações suspeitas que indicam uma possível lavagem de dinheiro. Recomenda-se que as autoridades competentes sejam notificadas e que sejam tomadas medidas para prevenir a continuação da lavagem de dinheiro.",
+    "grau_certeza": "ALTO",
+    "prazo_comunicacao_coaf": "24h"
+  },
+  "compliance": {
+    "decisao_final": "APROVADO_COM_RESSALVAS",
+    "score_compliance": 85,
+    "avaliacao_evidencias": "SUFICIENTE",
+    "pontos_fortes": [
+      "Evidências fortes de transações suspeitas com valores elevados",
+      "Uso de VPN/Tor em algumas transações",
+      "Classificação do cliente como PEP",
+      "Tipologia de lavagem de dinheiro identificada"
+    ],
+    "pontos_fracos": [
+      "Falta de informação sobre a origem dos fundos",
+      "Conexão entre as transações não clara",
+      "Informação sobre os receptores das transações não disponível"
+    ],
+    "ressalvas": [
+      "Ajustar a seção 6 do SAR para incluir mais detalhes sobre a origem dos fundos",
+      "Incluir mais informações sobre os receptores das transações",
+      "Verificar se há outras transações suspeitas não incluídas no SAR"
+    ],
+    "risco_nao_reportar": "ALTO",
+    "risco_reportar_sem_base": "BAIXO",
+    "prazo_acao": "24h",
+    "instrucoes_finais": "A equipe deve ajustar o SAR de acordo com as ressalvas e incluir mais informações sobre a origem dos fundos e os receptores das transações. Além disso, é importante verificar se há outras transações suspeitas não incluídas no SAR. Após os ajustes, o SAR deve ser submetido ao COAF dentro do prazo de 24 horas.",
+    "checklist_coaf": {
+      "identificacao_completa": true,
+      "descricao_operacoes": true,
+      "tipologia_identificada": true,
+      "fundamentacao_legal": true,
+      "medidas_tomadas": true,
+      "prazo_comunicacao": true
+    }
+  }
+}

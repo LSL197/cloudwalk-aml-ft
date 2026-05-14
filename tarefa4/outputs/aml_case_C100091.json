@@ -1,0 +1,537 @@
+{
+  "customer_id": "C100091",
+  "timestamp": "2026-05-11T19:16:40.339075",
+  "total_segundos": 115.5,
+  "pipeline_log": [
+    {
+      "agente": "DADOS",
+      "elapsed_s": 3.4,
+      "keys": [
+        "customer_id",
+        "raw_response",
+        "dados_estruturados"
+      ]
+    },
+    {
+      "agente": "DETECCAO",
+      "elapsed_s": 1.7,
+      "keys": [
+        "decisao",
+        "score_deteccao",
+        "flags_acionadas",
+        "tipologias_identificadas",
+        "justificativa",
+        "urgencia",
+        "proximo_passo"
+      ]
+    },
+    {
+      "agente": "INVESTIGACAO",
+      "elapsed_s": 49.5,
+      "keys": [
+        "tipologia_principal",
+        "tipologias_secundarias",
+        "narrativa_investigativa",
+        "linha_do_tempo",
+        "evidencias_fortes",
+        "evidencias_fracas",
+        "rede_suspeita",
+        "lacunas_investigativas",
+        "recomendacao_sar",
+        "fundamentacao_legal"
+      ]
+    },
+    {
+      "agente": "SAR",
+      "elapsed_s": 36.5,
+      "keys": [
+        "sar_numero",
+        "data_emissao",
+        "classificacao",
+        "secao_1_identificacao",
+        "secao_2_resumo_executivo",
+        "secao_3_descricao_operacoes",
+        "secao_4_tipologia",
+        "secao_5_fundamentacao_legal",
+        "secao_6_evidencias",
+        "secao_7_medidas_tomadas",
+        "secao_8_conclusao",
+        "grau_certeza",
+        "prazo_comunicacao_coaf"
+      ]
+    },
+    {
+      "agente": "COMPLIANCE",
+      "elapsed_s": 24.5,
+      "keys": [
+        "decisao_final",
+        "score_compliance",
+        "avaliacao_evidencias",
+        "pontos_fortes",
+        "pontos_fracos",
+        "ressalvas",
+        "risco_nao_reportar",
+        "risco_reportar_sem_base",
+        "prazo_acao",
+        "instrucoes_finais",
+        "checklist_coaf"
+      ]
+    }
+  ],
+  "perfil": {
+    "customer_id": "C100091",
+    "raw_response": "```json\n{\n  \"customer_id\": \"C100091\",\n  \"perfil_resumido\": \"O cliente C100091 é um proprietário de loja com renda anual de R$ 10.173,00 e classificação de risco baixo. No entanto, chama atenção a presença de uma transação com alerta de sanções e a realização de transações internacionais.\",\n  \"kyc_highlights\": [\n    \"Renda anual de R$ 10.173,00\",\n    \"Classificação de risco baixo\",\n    \"Não é proprietário benéfico\",\n    \"Não é PEP\",\n    \"Pontuação de risco KYC: 66,0\"\n  ],\n  \"transacoes_highlights\": [\n    \"Total de transações: 21\",\n    \"Valor total transacionado: R$ 91.349,77\",\n    \"Transação com maior valor: R$ 18.507,97\",\n    \"Presença de transação com alerta de sanções\",\n    \"Realização de transações internacionais\"\n  ],\n  \"dados_estruturados\": {\n    \"kyc\": {\n      \"customer_id\": \"C100091\",\n      \"full_name\": \"Customer 92\",\n      \"cpf_cnpj\": \"68157089319\",\n      \"date_of_birth\": \"1983-10-05\",\n      \"annual_income_brl\": \"10173.0\",\n      \"declared_occupation\": \"Store Owner\",\n      \"risk_rating\": \"Low\",\n      \"registration_date\": \"2022-04-07\",\n      \"country\": \"BR\",\n      \"state\": \"MG\",\n      \"city\": \"Belo Horizonte\",\n      \"beneficial_owner\": \"No\",\n      \"pep\": \"No\",\n      \"kyc_tier\": \"L2\",\n      \"kyc_risk_score\": \"66.0\",\n      \"sanctions_list_hit\": \"No\"\n    },\n    \"transactions_summary\": {\n      \"total_txs\": 21,\n      \"total_volume_brl\": 91349.77000000002,\n      \"max_tx_brl\": 18507.97,\n      \"rails_used\": [\n        \"PIX\",\n        \"Wire\",\n        \"Card\"\n      ],\n      \"n_sanctions_hits\": 1,\n      \"n_vpn_txs\": 1,\n      \"n_crossborder\": 3,\n      \"n_struct_txs\": 1,\n      \"date_range\": \"2025-07-03T15:22:30 → 2025-10-04T01:01:09\"\n    },\n    \"top_transactions\": [\n      {\n        \"transaction_id\": \"TRD52BHJTAJLQ\",\n        \"amount_brl\": 18507.97,\n        \"transaction_type\": \"PIX\",\n        \"geo_country\": \"BR\",\n        \"sanctions_screening_hit\": \"No\",\n        \"ip_proxy_vpn_tor\": \"None\",\n        \"timestamp\": \"2025-08-20T18:05:40\"\n      },\n      {\n        \"transaction_id\": \"TJRKHTP81JROK\",\n        \"amount_brl\": 11672.88,\n        \"transaction_type\": \"Wire\",\n        \"geo_country\": \"IR\",\n        \"sanctions_screening_hit\": \"Yes\",\n        \"ip_proxy_vpn_tor\": \"None\",\n        \"timestamp\": \"2025-08-07T17:28:29\"\n      },\n      {\n        \"transaction_id\": \"TJZQI83ROKQ81\",\n        \"amount_brl\": 11591.32,\n        \"transaction_type\": \"Card\",\n        \"geo_country\": \"BR\",\n        \"sanctions_screening_hit\": \"No\",\n        \"ip_proxy_vpn_tor\": \"None\",\n        \"timestamp\": \"2025-10-03T12:17:16\"\n      },\n      {\n        \"transaction_id\": \"TLF007IGRTEAB\",\n        \"amount_brl\": 9732.08,\n        \"transaction_type\": \"PIX\",\n        \"geo_country\": \"BR\",\n        \"sanctions_screening_hit\": \"No\",\n        \"ip_proxy_vpn_tor\": \"None\",\n        \"timestamp\": \"2025-07-15T00:57:33\"\n      },\n      {\n        \"transaction_id\": \"TGIJ6V3FQJ926\",\n        \"amount_brl\": 8819.61,\n        \"transaction_type\": \"PIX\",\n        \"geo_country\": \"BR\",\n        \"sanctions_screening_hit\": \"No\",\n        \"ip_proxy_vpn_tor\": \"None\",\n        \"timestamp\": \"2025-09-02T16:06:17\"\n      }\n    ],\n    \"merchants\": [\n      {\n        \"merchant_id\": \"M200363\",\n        \"mcc\": \"5999.0\",\n        \"mcc_risk\": \"Normal\",\n        \"merchant_high_risk_flag\": \"Yes\",\n        \"merchant_chargeback_ratio_90d\": \"0.117\",\n        \"owner_customer_id\": null\n      },\n      {\n        \"merchant_id\": \"M200985\",\n        \"mcc\": \"4789.0\",\n        \"mcc_risk\": \"Normal\",\n        \"merchant_high_risk_flag\": \"No\",\n        \"merchant_chargeback_ratio_90d\": \"0.008\",\n        \"owner_customer_id\": null\n      },\n      {\n        \"merchant_id\": \"M200616\",\n        \"mcc\": \"4829.0\",\n        \"mcc_risk\": \"High\",\n        \"merchant_high_risk_flag\": \"Yes\",\n        \"merchant_chargeback_ratio_90d\": \"0.114\",\n        \"owner_customer_id\": \"C100376\"\n      },\n      {\n        \"merchant_id\": \"M200264\",\n        \"mcc\": \"4900.0\",\n        \"mcc_risk\": \"Normal\",\n        \"merchant_high_risk_flag\": \"No\",\n        \"merchant_chargeback_ratio_90d\": \"0.037\",\n        \"owner_customer_id\": null\n      },\n      {\n        \"merchant_id\": \"M200796\",\n        \"mcc\": \"4814.0\",\n        \"mcc_risk\": \"Normal\",\n        \"merchant_high_risk_flag\": \"No\",\n        \"merchant_chargeback_ratio_90d\": \"0.064\",\n        \"owner_customer_id\": null\n      },\n      {\n        \"merchant_id\": \"M200903\",\n        \"mcc\": \"6211.0\",\n        \"mcc_risk\": \"High\",\n        \"merchant_high_risk_flag\": \"Yes\",\n        \"merchant_chargeback_ratio_90d\": \"0.184\",\n        \"owner_customer_id\": null\n      },\n      {\n        \"merchant_id\": \"M200194\",\n        \"mcc\": \"5945.0\",\n        \"mcc_risk\": \"Normal\",\n        \"merchant_high_risk_flag\": \"No\",\n        \"merchant_chargeback_ratio_90d\": \"0.065\",\n        \"owner_customer_id\": null",
+    "dados_estruturados": {
+      "customer_id": "C100091",
+      "kyc": {
+        "customer_id": "C100091",
+        "full_name": "Customer 92",
+        "cpf_cnpj": "68157089319",
+        "date_of_birth": "1983-10-05",
+        "annual_income_brl": "10173.0",
+        "declared_occupation": "Store Owner",
+        "risk_rating": "Low",
+        "registration_date": "2022-04-07",
+        "country": "BR",
+        "state": "MG",
+        "city": "Belo Horizonte",
+        "beneficial_owner": "No",
+        "pep": "No",
+        "kyc_tier": "L2",
+        "kyc_risk_score": "66.0",
+        "sanctions_list_hit": "No"
+      },
+      "transactions_summary": {
+        "total_txs": 21,
+        "total_volume_brl": 91349.77000000002,
+        "max_tx_brl": 18507.97,
+        "rails_used": [
+          "PIX",
+          "Wire",
+          "Card"
+        ],
+        "n_sanctions_hits": 1,
+        "n_vpn_txs": 1,
+        "n_crossborder": 3,
+        "n_struct_txs": 1,
+        "date_range": "2025-07-03T15:22:30 → 2025-10-04T01:01:09"
+      },
+      "top_transactions": [
+        {
+          "transaction_id": "TRD52BHJTAJLQ",
+          "amount_brl": 18507.97,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-08-20T18:05:40"
+        },
+        {
+          "transaction_id": "TJRKHTP81JROK",
+          "amount_brl": 11672.88,
+          "transaction_type": "Wire",
+          "geo_country": "IR",
+          "sanctions_screening_hit": "Yes",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-08-07T17:28:29"
+        },
+        {
+          "transaction_id": "TJZQI83ROKQ81",
+          "amount_brl": 11591.32,
+          "transaction_type": "Card",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-10-03T12:17:16"
+        },
+        {
+          "transaction_id": "TLF007IGRTEAB",
+          "amount_brl": 9732.08,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-07-15T00:57:33"
+        },
+        {
+          "transaction_id": "TGIJ6V3FQJ926",
+          "amount_brl": 8819.61,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-09-02T16:06:17"
+        }
+      ],
+      "merchants": [
+        {
+          "merchant_id": "M200363",
+          "mcc": "5999.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "Yes",
+          "merchant_chargeback_ratio_90d": "0.117",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200985",
+          "mcc": "4789.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.008",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200616",
+          "mcc": "4829.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "Yes",
+          "merchant_chargeback_ratio_90d": "0.114",
+          "owner_customer_id": "C100376"
+        },
+        {
+          "merchant_id": "M200264",
+          "mcc": "4900.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.037",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200796",
+          "mcc": "4814.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.064",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200903",
+          "mcc": "6211.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "Yes",
+          "merchant_chargeback_ratio_90d": "0.184",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200194",
+          "mcc": "5945.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.065",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200992",
+          "mcc": "5945.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.038",
+          "owner_customer_id": "C101460"
+        },
+        {
+          "merchant_id": "M200233",
+          "mcc": "6011.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "Yes",
+          "merchant_chargeback_ratio_90d": "0.125",
+          "owner_customer_id": "C100768"
+        },
+        {
+          "merchant_id": "M200800",
+          "mcc": "5812.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.019",
+          "owner_customer_id": "C100588"
+        },
+        {
+          "merchant_id": "M200527",
+          "mcc": "7995.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.113",
+          "owner_customer_id": "C102233"
+        },
+        {
+          "merchant_id": "M200230",
+          "mcc": "4829.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.019",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200756",
+          "mcc": "4900.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.04",
+          "owner_customer_id": null
+        }
+      ],
+      "ml_score": {
+        "customer_id": "C100091",
+        "declared_occupation": "Store Owner",
+        "annual_income_brl": 10173.0,
+        "risk_rating": "Low",
+        "risk_score": 7,
+        "iso_score": 0.1907039316872677,
+        "xgb_prob": 0.16431643,
+        "final_score": 0.172232676517365,
+        "risk_tier": "LOW",
+        "max_income_ratio": 21.83,
+        "min_geojump_min": 9999.0,
+        "n_struct_txs": 1,
+        "n_vpn_txs": 0,
+        "total_vol": 91349.77,
+        "n_txs": 18,
+        "n_crossborder": 3,
+        "fanout_ratio": 40.0852,
+        "n_geojumps": 0,
+        "n_sanctions_hits": 1,
+        "kyc_risk_score": 66.0
+      }
+    }
+  },
+  "deteccao": {
+    "decisao": "INVESTIGAR",
+    "score_deteccao": 85,
+    "flags_acionadas": [
+      {
+        "flag": "Sanctions",
+        "evidencia": "Presença de transação com alerta de sanções (TJRKHTP81JROK)",
+        "peso": "ALTO"
+      },
+      {
+        "flag": "Income Ratio",
+        "evidencia": "Renda anual de R$ 10.173,00 incompatível com transações de alto valor (R$ 18.507,97 e R$ 11.672,88)",
+        "peso": "MEDIO"
+      },
+      {
+        "flag": "Geo-jump",
+        "evidencia": "Transações em diferentes países (BR e IR) em curto período de tempo",
+        "peso": "MEDIO"
+      },
+      {
+        "flag": "Fan-out PIX",
+        "evidencia": "Recebeu de 3 diferentes países e distribuiu para 3 diferentes países",
+        "peso": "BAIXO"
+      }
+    ],
+    "tipologias_identificadas": [
+      "Sanctions",
+      "Income Ratio",
+      "Geo-jump",
+      "Fan-out PIX"
+    ],
+    "justificativa": "O cliente C100091 apresenta várias flags de risco, incluindo a presença de transações com alerta de sanções, renda anual incompatível com transações de alto valor e transações em diferentes países em curto período de tempo. Além disso, o cliente também apresenta um padrão de comportamento de fan-out PIX, o que pode indicar uma atividade suspeita. Portanto, é necessário investigar mais a fundo para determinar se o cliente está envolvido em atividades ilícitas.",
+    "urgencia": "ALTA",
+    "proximo_passo": "Solicitar mais informações sobre as transações suspeitas e realizar uma análise mais detalhada das atividades do cliente."
+  },
+  "investigacao": {
+    "tipologia_principal": "Lavagem de Dinheiro",
+    "tipologias_secundarias": [
+      "Evasão Fiscal",
+      "Financiamento ao Terrorismo"
+    ],
+    "narrativa_investigativa": "A investigação sobre o cliente C100091 revelou uma série de transações suspeitas que sugerem a possibilidade de lavagem de dinheiro. O cliente, um proprietário de loja, apresentou uma renda anual de R$ 10.173,00, o que é incompatível com as transações de alto valor realizadas. Além disso, foi detectada uma transação com alerta de sanções, o que aumenta a suspeita de atividades ilícitas. A análise da linha do tempo das transações suspeitas mostrou um padrão de comportamento recorrente, com o cliente realizando transações de alto valor em diferentes países. A rede de relacionamentos do cliente também é suspeita, com várias transações com mercadores de alto risco. A tipologia exata segundo FATF/COAF é a lavagem de dinheiro, com possíveis conexões com a evasão fiscal e o financiamento ao terrorismo.",
+    "linha_do_tempo": [
+      {
+        "data": "2025-07-15",
+        "evento": "Transação de R$ 9.732,08 com o mercador M200985",
+        "relevancia": "MEDIA"
+      },
+      {
+        "data": "2025-08-07",
+        "evento": "Transação de R$ 11.672,88 com o mercador M200363, com alerta de sanções",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-08-20",
+        "evento": "Transação de R$ 18.507,97 com o mercador M200796",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-09-02",
+        "evento": "Transação de R$ 8.819,61 com o mercador M200616",
+        "relevancia": "MEDIA"
+      },
+      {
+        "data": "2025-10-03",
+        "evento": "Transação de R$ 11.591,32 com o mercador M200233",
+        "relevancia": "MEDIA"
+      }
+    ],
+    "evidencias_fortes": [
+      "Transação com alerta de sanções",
+      "Renda anual incompatível com transações de alto valor",
+      "Padrão de comportamento recorrente",
+      "Rede de relacionamentos suspeita"
+    ],
+    "evidencias_fracas": [
+      "Falta de informações sobre a origem dos fundos",
+      "Falta de informações sobre a finalidade das transações"
+    ],
+    "rede_suspeita": {
+      "nos": [
+        "C100091",
+        "M200985",
+        "M200363",
+        "M200796",
+        "M200616",
+        "M200233"
+      ],
+      "conexoes": [
+        {
+          "origem": "C100091",
+          "destino": "M200985",
+          "valor": "R$ 9.732,08"
+        },
+        {
+          "origem": "C100091",
+          "destino": "M200363",
+          "valor": "R$ 11.672,88"
+        },
+        {
+          "origem": "C100091",
+          "destino": "M200796",
+          "valor": "R$ 18.507,97"
+        },
+        {
+          "origem": "C100091",
+          "destino": "M200616",
+          "valor": "R$ 8.819,61"
+        },
+        {
+          "origem": "C100091",
+          "destino": "M200233",
+          "valor": "R$ 11.591,32"
+        }
+      ]
+    },
+    "lacunas_investigativas": [
+      "Origem dos fundos",
+      "Finalidade das transações",
+      "Informações sobre os mercadores"
+    ],
+    "recomendacao_sar": "EMITIR",
+    "fundamentacao_legal": [
+      "Lei nº 9.613/98 - Lei de Lavagem de Dinheiro",
+      "Lei nº 12.810/2013 - Lei de Combate ao Financiamento ao Terrorismo"
+    ]
+  },
+  "sar": {
+    "sar_numero": "SAR-2026-05-AUTO",
+    "data_emissao": "2026-05-11",
+    "classificacao": "CONFIDENCIAL",
+    "secao_1_identificacao": {
+      "sujeito_obrigado": "CloudWalk Payments",
+      "cnpj_sujeito": "09.173.490/0001-50",
+      "responsavel_compliance": "Departamento AML/FT",
+      "cliente_id": "C100091",
+      "nome_cliente": "Customer 92",
+      "cpf_cnpj": "68157089319",
+      "ocupacao": "Store Owner",
+      "renda_declarada": "R$ 10.173,00"
+    },
+    "secao_2_resumo_executivo": "O cliente C100091 apresenta várias flags de risco, incluindo a presença de transações com alerta de sanções, renda anual incompatível com transações de alto valor e transações em diferentes países em curto período de tempo. A investigação revelou um padrão de comportamento recorrente e uma rede de relacionamentos suspeita, o que sugere a possibilidade de lavagem de dinheiro.",
+    "secao_3_descricao_operacoes": {
+      "periodo": "2025-07-03 a 2025-10-04",
+      "volume_total": "R$ 91.349,77",
+      "numero_operacoes": 21,
+      "operacoes_criticas": [
+        {
+          "id": "TJRKHTP81JROK",
+          "data": "2025-08-07",
+          "valor": "R$ 11.672,88",
+          "descricao": "Transação com alerta de sanções",
+          "red_flag": "Sanções"
+        },
+        {
+          "id": "TRD52BHJTAJLQ",
+          "data": "2025-08-20",
+          "valor": "R$ 18.507,97",
+          "descricao": "Transação de alto valor",
+          "red_flag": "Income Ratio"
+        }
+      ]
+    },
+    "secao_4_tipologia": {
+      "tipologia_principal": "Lavagem de Dinheiro",
+      "descricao_tipologia": "O cliente apresenta um padrão de comportamento recorrente e uma rede de relacionamentos suspeita, o que sugere a possibilidade de lavagem de dinheiro.",
+      "fase_ld": "Layering",
+      "base_fatf": "FATF Recomendação 1"
+    },
+    "secao_5_fundamentacao_legal": [
+      {
+        "norma": "Lei nº 9.613/98",
+        "artigo": "Art. 1º",
+        "aplicacao": "Lavagem de Dinheiro"
+      },
+      {
+        "norma": "Lei nº 12.810/2013",
+        "artigo": "Art. 1º",
+        "aplicacao": "Combate ao Financiamento ao Terrorismo"
+      }
+    ],
+    "secao_6_evidencias": {
+      "evidencias_objetivas": [
+        "Transação com alerta de sanções",
+        "Renda anual incompatível com transações de alto valor",
+        "Padrão de comportamento recorrente",
+        "Rede de relacionamentos suspeita"
+      ],
+      "documentos_anexos": [
+        "Cópia da identidade do cliente",
+        "Cópia da declaração de renda do cliente",
+        "Relatório de transações do cliente"
+      ],
+      "lacunas": [
+        "Origem dos fundos",
+        "Finalidade das transações",
+        "Informações sobre os mercadores"
+      ]
+    },
+    "secao_7_medidas_tomadas": [
+      "Notificação ao COAF",
+      "Bloqueio das transações do cliente",
+      "Investigação mais aprofundada"
+    ],
+    "secao_8_conclusao": "O cliente C100091 apresenta um risco alto de lavagem de dinheiro e é recomendado que sejam tomadas medidas para prevenir e combater essa atividade. É necessário realizar uma investigação mais aprofundada e notificar o COAF.",
+    "grau_certeza": "ALTO",
+    "prazo_comunicacao_coaf": "24h"
+  },
+  "compliance": {
+    "decisao_final": "APROVADO_COM_RESSALVAS",
+    "score_compliance": 85,
+    "avaliacao_evidencias": "SUFICIENTE",
+    "pontos_fortes": [
+      "Evidências fortes de transações suspeitas",
+      "Padrão de comportamento recorrente",
+      "Rede de relacionamentos suspeita",
+      "Fundamentação legal correta"
+    ],
+    "pontos_fracos": [
+      "Falta de informações sobre a origem dos fundos",
+      "Falta de informações sobre a finalidade das transações",
+      "Lacunas investigativas não completamente abordadas"
+    ],
+    "ressalvas": [
+      "Incluir informações adicionais sobre a origem dos fundos",
+      "Incluir informações adicionais sobre a finalidade das transações",
+      "Realizar investigação mais aprofundada sobre os mercadores envolvidos"
+    ],
+    "risco_nao_reportar": "ALTO",
+    "risco_reportar_sem_base": "BAIXO",
+    "prazo_acao": "24h",
+    "instrucoes_finais": "A equipe deve incluir as informações adicionais solicitadas e realizar a investigação mais aprofundada sobre os mercadores envolvidos antes de submeter o SAR ao COAF. Além disso, é importante manter a documentação completa e atualizada para evitar qualquer risco regulatório.",
+    "checklist_coaf": {
+      "identificacao_completa": true,
+      "descricao_operacoes": true,
+      "tipologia_identificada": true,
+      "fundamentacao_legal": true,
+      "medidas_tomadas": true,
+      "prazo_comunicacao": true
+    }
+  }
+}

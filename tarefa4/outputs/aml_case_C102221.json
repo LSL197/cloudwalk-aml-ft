@@ -1,0 +1,556 @@
+{
+  "customer_id": "C102221",
+  "timestamp": "2026-05-11T19:18:37.895333",
+  "total_segundos": 143.5,
+  "pipeline_log": [
+    {
+      "agente": "DADOS",
+      "elapsed_s": 13.4,
+      "keys": [
+        "customer_id",
+        "raw_response",
+        "dados_estruturados"
+      ]
+    },
+    {
+      "agente": "DETECCAO",
+      "elapsed_s": 26.4,
+      "keys": [
+        "decisao",
+        "score_deteccao",
+        "flags_acionadas",
+        "tipologias_identificadas",
+        "justificativa",
+        "urgencia",
+        "proximo_passo"
+      ]
+    },
+    {
+      "agente": "INVESTIGACAO",
+      "elapsed_s": 42.8,
+      "keys": [
+        "tipologia_principal",
+        "tipologias_secundarias",
+        "narrativa_investigativa",
+        "linha_do_tempo",
+        "evidencias_fortes",
+        "evidencias_fracas",
+        "rede_suspeita",
+        "lacunas_investigativas",
+        "recomendacao_sar",
+        "fundamentacao_legal"
+      ]
+    },
+    {
+      "agente": "SAR",
+      "elapsed_s": 38.3,
+      "keys": [
+        "sar_numero",
+        "data_emissao",
+        "classificacao",
+        "secao_1_identificacao",
+        "secao_2_resumo_executivo",
+        "secao_3_descricao_operacoes",
+        "secao_4_tipologia",
+        "secao_5_fundamentacao_legal",
+        "secao_6_evidencias",
+        "secao_7_medidas_tomadas",
+        "secao_8_conclusao",
+        "grau_certeza",
+        "prazo_comunicacao_coaf"
+      ]
+    },
+    {
+      "agente": "COMPLIANCE",
+      "elapsed_s": 22.6,
+      "keys": [
+        "decisao_final",
+        "score_compliance",
+        "avaliacao_evidencias",
+        "pontos_fortes",
+        "pontos_fracos",
+        "ressalvas",
+        "risco_nao_reportar",
+        "risco_reportar_sem_base",
+        "prazo_acao",
+        "instrucoes_finais",
+        "checklist_coaf"
+      ]
+    }
+  ],
+  "perfil": {
+    "customer_id": "C102221",
+    "raw_response": "```json\n{\n  \"customer_id\": \"C102221\",\n  \"perfil_resumido\": \"O cliente é um consultor de 59 anos, com renda anual de R$ 7.313,00, e apresenta um perfil de risco alto de acordo com o KYC e o modelo de machine learning. Seu histórico de transações inclui várias operações de alto valor e uso de diferentes canais de pagamento.\",\n  \"kyc_highlights\": [\n    \"Risco alto de acordo com o KYC\",\n    \"Renda anual de R$ 7.313,00\",\n    \"Não é proprietário benéfico\",\n    \"Não é PEP\",\n    \"Pontuação de risco KYC: 58,0\"\n  ],\n  \"transacoes_highlights\": [\n    \"Total de transações: 21\",\n    \"Valor total transacionado: R$ 103.323,77\",\n    \"Transação de maior valor: R$ 32.528,04\",\n    \"Uso de diferentes canais de pagamento: Wire, Card e PIX\",\n    \"Transações internacionais: 6\"\n  ],\n  \"dados_estruturados\": {\n    \"kyc\": {\n      \"customer_id\": \"C102221\",\n      \"full_name\": \"Customer 2222\",\n      \"cpf_cnpj\": \"11605547780\",\n      \"date_of_birth\": \"1964-10-16\",\n      \"annual_income_brl\": \"7313.0\",\n      \"declared_occupation\": \"Consultant\",\n      \"risk_rating\": \"High\",\n      \"registration_date\": \"2020-12-25\",\n      \"country\": \"BR\",\n      \"state\": \"MG\",\n      \"city\": \"Belo Horizonte\",\n      \"beneficial_owner\": \"No\",\n      \"pep\": \"No\",\n      \"kyc_tier\": \"L1\",\n      \"kyc_risk_score\": \"58.0\",\n      \"sanctions_list_hit\": \"No\"\n    },\n    \"transactions_summary\": {\n      \"total_txs\": 21,\n      \"total_volume_brl\": 103323.77,\n      \"max_tx_brl\": 32528.04,\n      \"rails_used\": [\n        \"Wire\",\n        \"Card\",\n        \"PIX\"\n      ],\n      \"n_sanctions_hits\": 0,\n      \"n_vpn_txs\": 3,\n      \"n_crossborder\": 6,\n      \"n_struct_txs\": 2,\n      \"date_range\": \"2025-07-01T15:51:46 → 2025-10-01T01:20:47\"\n    },\n    \"top_transactions\": [\n      {\n        \"transaction_id\": \"TI1DQVH0Z76L7\",\n        \"amount_brl\": 32528.04,\n        \"transaction_type\": \"PIX\",\n        \"geo_country\": \"BR\",\n        \"sanctions_screening_hit\": \"No\",\n        \"ip_proxy_vpn_tor\": \"None\",\n        \"timestamp\": \"2025-07-06T07:08:48\"\n      },\n      {\n        \"transaction_id\": \"TWSDYKCDB3TQC\",\n        \"amount_brl\": 17634.73,\n        \"transaction_type\": \"Card\",\n        \"geo_country\": \"BR\",\n        \"sanctions_screening_hit\": \"No\",\n        \"ip_proxy_vpn_tor\": \"None\",\n        \"timestamp\": \"2025-10-01T01:20:47\"\n      },\n      {\n        \"transaction_id\": \"TOLMZRCXQXGEP\",\n        \"amount_brl\": 11306.91,\n        \"transaction_type\": \"PIX\",\n        \"geo_country\": \"BR\",\n        \"sanctions_screening_hit\": \"No\",\n        \"ip_proxy_vpn_tor\": \"None\",\n        \"timestamp\": \"2025-07-09T09:51:13\"\n      },\n      {\n        \"transaction_id\": \"TI54S9AH5C2MU\",\n        \"amount_brl\": 9793.29,\n        \"transaction_type\": \"Card\",\n        \"geo_country\": \"BR\",\n        \"sanctions_screening_hit\": \"No\",\n        \"ip_proxy_vpn_tor\": \"None\",\n        \"timestamp\": \"2025-09-24T10:34:48\"\n      },\n      {\n        \"transaction_id\": \"T1THWOR0A8G2G\",\n        \"amount_brl\": 9043.82,\n        \"transaction_type\": \"Wire\",\n        \"geo_country\": \"BR\",\n        \"sanctions_screening_hit\": \"No\",\n        \"ip_proxy_vpn_tor\": \"None\",\n        \"timestamp\": \"2025-07-01T15:51:46\"\n      }\n    ],\n    \"merchants\": [\n      {\n        \"merchant_id\": \"M200698\",\n        \"mcc\": \"7995.0\",\n        \"mcc_risk\": \"High\",\n        \"merchant_high_risk_flag\": \"No\",\n        \"merchant_chargeback_ratio_90d\": \"0.059\",\n        \"owner_customer_id\": \"C102355\"\n      },\n      {\n        \"merchant_id\": \"M200042\",\n        \"mcc\": \"4829.0\",\n        \"mcc_risk\": \"High\",\n        \"merchant_high_risk_flag\": \"No\",\n        \"merchant_chargeback_ratio_90d\": \"0.047\",\n        \"owner_customer_id\": null\n      },\n      {\n        \"merchant_id\": \"M200813\",\n        \"mcc\": \"5411.0\",\n        \"mcc_risk\": \"Normal\",\n        \"merchant_high_risk_flag\": \"No\",\n        \"merchant_chargeback_ratio_90d\": \"0.033\",\n        \"owner_customer_id\": null\n      },\n      {\n        \"merchant_id\": \"M200545\",\n        \"mcc\": \"7995.0\",\n        \"mcc_risk\": \"High\",\n        \"merchant_high_risk_flag\": \"No\",\n        \"merchant_chargeback_ratio_90d\": \"0.029\",\n        \"owner_customer_id\": null\n      },\n      {\n        \"merchant_id\": \"M200832\",\n        \"mcc\": \"5945.0\",\n        \"mcc_risk\": \"Normal\",\n        \"merchant_high_risk_flag\": \"No\",\n        \"merchant_chargeback_ratio_90d\": \"0.033\",\n        \"owner_customer_id\": null\n      },\n      {\n        \"merchant_id\": \"M200693\",\n        \"mcc\": \"5812.0\",\n        \"mcc_risk\": \"Normal\",\n        \"merchant_high_risk_flag\": \"Yes\",\n        \"merchant_chargeback_ratio_90d\": \"0.106\",\n        \"owner_customer_id\": null\n      },\n      {\n        \"merchant_id\": \"M200690\",\n        \"mcc\": \"6051.0\",\n        \"mcc_risk\": \"High\",\n        \"merchant_high_risk_flag\": \"No\",\n        \"merchant_chargeback_ratio_90",
+    "dados_estruturados": {
+      "customer_id": "C102221",
+      "kyc": {
+        "customer_id": "C102221",
+        "full_name": "Customer 2222",
+        "cpf_cnpj": "11605547780",
+        "date_of_birth": "1964-10-16",
+        "annual_income_brl": "7313.0",
+        "declared_occupation": "Consultant",
+        "risk_rating": "High",
+        "registration_date": "2020-12-25",
+        "country": "BR",
+        "state": "MG",
+        "city": "Belo Horizonte",
+        "beneficial_owner": "No",
+        "pep": "No",
+        "kyc_tier": "L1",
+        "kyc_risk_score": "58.0",
+        "sanctions_list_hit": "No"
+      },
+      "transactions_summary": {
+        "total_txs": 21,
+        "total_volume_brl": 103323.77,
+        "max_tx_brl": 32528.04,
+        "rails_used": [
+          "Wire",
+          "Card",
+          "PIX"
+        ],
+        "n_sanctions_hits": 0,
+        "n_vpn_txs": 3,
+        "n_crossborder": 6,
+        "n_struct_txs": 2,
+        "date_range": "2025-07-01T15:51:46 → 2025-10-01T01:20:47"
+      },
+      "top_transactions": [
+        {
+          "transaction_id": "TI1DQVH0Z76L7",
+          "amount_brl": 32528.04,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-07-06T07:08:48"
+        },
+        {
+          "transaction_id": "TWSDYKCDB3TQC",
+          "amount_brl": 17634.73,
+          "transaction_type": "Card",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-10-01T01:20:47"
+        },
+        {
+          "transaction_id": "TOLMZRCXQXGEP",
+          "amount_brl": 11306.91,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-07-09T09:51:13"
+        },
+        {
+          "transaction_id": "TI54S9AH5C2MU",
+          "amount_brl": 9793.29,
+          "transaction_type": "Card",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-09-24T10:34:48"
+        },
+        {
+          "transaction_id": "T1THWOR0A8G2G",
+          "amount_brl": 9043.82,
+          "transaction_type": "Wire",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-07-01T15:51:46"
+        }
+      ],
+      "merchants": [
+        {
+          "merchant_id": "M200698",
+          "mcc": "7995.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.059",
+          "owner_customer_id": "C102355"
+        },
+        {
+          "merchant_id": "M200042",
+          "mcc": "4829.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.047",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200813",
+          "mcc": "5411.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.033",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200545",
+          "mcc": "7995.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.029",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200832",
+          "mcc": "5945.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.033",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200693",
+          "mcc": "5812.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "Yes",
+          "merchant_chargeback_ratio_90d": "0.106",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200690",
+          "mcc": "6051.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.011",
+          "owner_customer_id": "C100687"
+        },
+        {
+          "merchant_id": "M200926",
+          "mcc": "5945.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.039",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200072",
+          "mcc": "5999.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.038",
+          "owner_customer_id": "C101806"
+        },
+        {
+          "merchant_id": "M200155",
+          "mcc": "5999.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.051",
+          "owner_customer_id": "C100261"
+        },
+        {
+          "merchant_id": "M200478",
+          "mcc": "6211.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.059",
+          "owner_customer_id": "C101756"
+        },
+        {
+          "merchant_id": "M200427",
+          "mcc": "6011.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.023",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200010",
+          "mcc": "4900.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.009",
+          "owner_customer_id": "C101806"
+        },
+        {
+          "merchant_id": "M200815",
+          "mcc": "5999.0",
+          "mcc_risk": "Normal",
+          "merchant_high_risk_flag": "No",
+          "merchant_chargeback_ratio_90d": "0.033",
+          "owner_customer_id": null
+        },
+        {
+          "merchant_id": "M200996",
+          "mcc": "6051.0",
+          "mcc_risk": "High",
+          "merchant_high_risk_flag": "Yes",
+          "merchant_chargeback_ratio_90d": "0.089",
+          "owner_customer_id": null
+        }
+      ],
+      "ml_score": {
+        "customer_id": "C102221",
+        "declared_occupation": "Consultant",
+        "annual_income_brl": 7313.0,
+        "risk_rating": "High",
+        "risk_score": 9,
+        "iso_score": 0.3465196204136384,
+        "xgb_prob": 0.9997187,
+        "final_score": 0.8037590000614694,
+        "risk_tier": "CRITICAL",
+        "max_income_ratio": 53.38,
+        "min_geojump_min": 0.56,
+        "n_struct_txs": 1,
+        "n_vpn_txs": 3,
+        "total_vol": 103323.77,
+        "n_txs": 18,
+        "n_crossborder": 6,
+        "fanout_ratio": 16.1569,
+        "n_geojumps": 1,
+        "n_sanctions_hits": 0,
+        "kyc_risk_score": 58.0
+      }
+    }
+  },
+  "deteccao": {
+    "decisao": "INVESTIGAR",
+    "score_deteccao": 85,
+    "flags_acionadas": [
+      {
+        "flag": "Income Ratio",
+        "evidencia": "Renda anual de R$ 7.313,00 incompatível com transações de alto valor (R$ 103.323,77)",
+        "peso": "ALTO"
+      },
+      {
+        "flag": "Structuring/Smurfing",
+        "evidencia": "Transações repetidas abaixo de R$ 10k (R$ 9.793,29 e R$ 9.043,82)",
+        "peso": "MEDIO"
+      },
+      {
+        "flag": "Geo-jump",
+        "evidencia": "Transações em diferentes cidades (Belo Horizonte) no mesmo horário",
+        "peso": "BAIXO"
+      },
+      {
+        "flag": "Fan-out PIX",
+        "evidencia": "Recebe de muitos e distribui para muitos (6 transações internacionais)",
+        "peso": "MEDIO"
+      },
+      {
+        "flag": "MCC Alto Risco",
+        "evidencia": "Transações com MCC alto risco (7995.0, 4829.0, 6211.0)",
+        "peso": "ALTO"
+      }
+    ],
+    "tipologias_identificadas": [
+      "Structuring/Smurfing",
+      "Income Ratio",
+      "Geo-jump",
+      "Fan-out PIX",
+      "MCC Alto Risco"
+    ],
+    "justificativa": "O cliente apresenta um perfil de risco alto de acordo com o KYC e o modelo de machine learning. As transações de alto valor (R$ 103.323,77) são incompatíveis com a renda anual declarada (R$ 7.313,00). Além disso, há transações repetidas abaixo de R$ 10k, o que pode indicar structuring/smurfing. A presença de transações internacionais e MCC alto risco também aumenta o risco de lavagem de dinheiro.",
+    "urgencia": "ALTA",
+    "proximo_passo": "Verificar a documentação do cliente e realizar uma análise mais aprofundada das transações para determinar se há evidências de lavagem de dinheiro ou outros crimes financeiros."
+  },
+  "investigacao": {
+    "tipologia_principal": "Lavagem de Dinheiro - Structuring/Smurfing",
+    "tipologias_secundarias": [
+      "Lavagem de Dinheiro - Income Ratio Incompatível",
+      "Lavagem de Dinheiro - MCC Alto Risco",
+      "Lavagem de Dinheiro - Geo-jump"
+    ],
+    "narrativa_investigativa": "O cliente C102221 apresenta um perfil de risco alto de acordo com o KYC e o modelo de machine learning. As transações de alto valor (R$ 103.323,77) são incompatíveis com a renda anual declarada (R$ 7.313,00). Além disso, há transações repetidas abaixo de R$ 10k, o que pode indicar structuring/smurfing. A presença de transações internacionais e MCC alto risco também aumenta o risco de lavagem de dinheiro. A análise da linha do tempo das transações suspeitas revela um padrão de comportamento recorrente e sistemático, com transações frequentes em diferentes cidades e países. A rede de relacionamentos do cliente inclui vários merchants de alto risco e indivíduos com ocupações variadas.",
+    "linha_do_tempo": [
+      {
+        "data": "2025-07-01T15:51:46",
+        "evento": "Transação de R$ 9.043,82 via Wire",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-07-06T07:08:48",
+        "evento": "Transação de R$ 32.528,04 via PIX",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-07-09T09:51:13",
+        "evento": "Transação de R$ 11.306,91 via PIX",
+        "relevancia": "MEDIA"
+      },
+      {
+        "data": "2025-09-24T10:34:48",
+        "evento": "Transação de R$ 9.793,29 via Card",
+        "relevancia": "MEDIA"
+      },
+      {
+        "data": "2025-10-01T01:20:47",
+        "evento": "Transação de R$ 17.634,73 via Card",
+        "relevancia": "ALTA"
+      }
+    ],
+    "evidencias_fortes": [
+      "Transações de alto valor incompatíveis com a renda anual declarada",
+      "Transações repetidas abaixo de R$ 10k",
+      "Presença de transações internacionais e MCC alto risco",
+      "Padrão de comportamento recorrente e sistemático"
+    ],
+    "evidencias_fracas": [
+      "Falta de informações sobre a ocupação e a renda do cliente",
+      "Falta de informações sobre os merchants e os indivíduos envolvidos nas transações"
+    ],
+    "rede_suspeita": {
+      "nos": [
+        "C102221",
+        "M200010",
+        "M200815",
+        "M200072",
+        "C102015",
+        "M200926"
+      ],
+      "conexoes": [
+        {
+          "origem": "C102221",
+          "destino": "M200010",
+          "valor": "R$ 2.156,18"
+        },
+        {
+          "origem": "C102221",
+          "destino": "M200815",
+          "valor": "R$ 5.266,78"
+        },
+        {
+          "origem": "C102221",
+          "destino": "M200072",
+          "valor": "R$ 32.528,04"
+        },
+        {
+          "origem": "C102221",
+          "destino": "C102015",
+          "valor": "R$ 9.793,29"
+        },
+        {
+          "origem": "C102221",
+          "destino": "M200926",
+          "valor": "R$ 17.634,73"
+        }
+      ]
+    },
+    "lacunas_investigativas": [
+      "Informações sobre a ocupação e a renda do cliente",
+      "Informações sobre os merchants e os indivíduos envolvidos nas transações",
+      "Análise mais aprofundada das transações e da rede de relacionamentos"
+    ],
+    "recomendacao_sar": "EMITIR",
+    "fundamentacao_legal": [
+      "Lei nº 9.613, de 3 de março de 1998 - Lei de Lavagem de Dinheiro",
+      "Resolução nº 4.434, de 30 de julho de 2015 - Resolução do COAF sobre a prevenção da lavagem de dinheiro"
+    ]
+  },
+  "sar": {
+    "sar_numero": "SAR-2026-05-AUTO",
+    "data_emissao": "2026-05-11",
+    "classificacao": "CONFIDENCIAL",
+    "secao_1_identificacao": {
+      "sujeito_obrigado": "CloudWalk Payments",
+      "cnpj_sujeito": "09.173.490/0001-50",
+      "responsavel_compliance": "Departamento AML/FT",
+      "cliente_id": "C102221",
+      "nome_cliente": "Customer 2222",
+      "cpf_cnpj": "11605547780",
+      "ocupacao": "Consultant",
+      "renda_declarada": "R$ 7.313,00"
+    },
+    "secao_2_resumo_executivo": "O cliente C102221 apresenta um perfil de risco alto de acordo com o KYC e o modelo de machine learning. As transações de alto valor (R$ 103.323,77) são incompatíveis com a renda anual declarada (R$ 7.313,00). Além disso, há transações repetidas abaixo de R$ 10k, o que pode indicar structuring/smurfing. A presença de transações internacionais e MCC alto risco também aumenta o risco de lavagem de dinheiro.",
+    "secao_3_descricao_operacoes": {
+      "periodo": "2025-07-01 a 2025-10-01",
+      "volume_total": "R$ 103.323,77",
+      "numero_operacoes": "21",
+      "operacoes_criticas": [
+        {
+          "id": "TI1DQVH0Z76L7",
+          "data": "2025-07-06T07:08:48",
+          "valor": "R$ 32.528,04",
+          "descricao": "Transação de alto valor via PIX",
+          "red_flag": "Transação incompatível com renda declarada"
+        },
+        {
+          "id": "TWSDYKCDB3TQC",
+          "data": "2025-10-01T01:20:47",
+          "valor": "R$ 17.634,73",
+          "descricao": "Transação de alto valor via Card",
+          "red_flag": "Transação incompatível com renda declarada"
+        }
+      ]
+    },
+    "secao_4_tipologia": {
+      "tipologia_principal": "Lavagem de Dinheiro - Structuring/Smurfing",
+      "descricao_tipologia": "Transações de alto valor incompatíveis com a renda anual declarada, transações repetidas abaixo de R$ 10k e presença de transações internacionais e MCC alto risco",
+      "fase_ld": "Placement",
+      "base_fatf": "FATF Recomendação 1"
+    },
+    "secao_5_fundamentacao_legal": [
+      {
+        "norma": "Lei nº 9.613, de 3 de março de 1998",
+        "artigo": "Art. 1º",
+        "aplicacao": "Lavagem de dinheiro"
+      },
+      {
+        "norma": "Resolução nº 4.434, de 30 de julho de 2015",
+        "artigo": "Art. 1º",
+        "aplicacao": "Prevenção da lavagem de dinheiro"
+      }
+    ],
+    "secao_6_evidencias": {
+      "evidencias_objetivas": [
+        "Transações de alto valor incompatíveis com a renda anual declarada",
+        "Transações repetidas abaixo de R$ 10k",
+        "Presença de transações internacionais e MCC alto risco"
+      ],
+      "documentos_anexos": [
+        "Relatório de transações do cliente",
+        "Documentação de identificação do cliente"
+      ],
+      "lacunas": [
+        "Informações sobre a ocupação e a renda do cliente",
+        "Informações sobre os merchants e os indivíduos envolvidos nas transações"
+      ]
+    },
+    "secao_7_medidas_tomadas": [
+      "Verificação da documentação do cliente",
+      "Análise mais aprofundada das transações e da rede de relacionamentos"
+    ],
+    "secao_8_conclusao": "Recomenda-se a emissão do SAR devido à presença de transações de alto valor incompatíveis com a renda anual declarada, transações repetidas abaixo de R$ 10k e presença de transações internacionais e MCC alto risco, o que pode indicar lavagem de dinheiro.",
+    "grau_certeza": "ALTO",
+    "prazo_comunicacao_coaf": "24h"
+  },
+  "compliance": {
+    "decisao_final": "APROVADO_COM_RESSALVAS",
+    "score_compliance": 85,
+    "avaliacao_evidencias": "SUFICIENTE",
+    "pontos_fortes": [
+      "Evidências de transações de alto valor incompatíveis com a renda anual declarada",
+      "Presença de transações repetidas abaixo de R$ 10k",
+      "Análise da linha do tempo das transações suspeitas",
+      "Identificação de uma rede de relacionamentos suspeita"
+    ],
+    "pontos_fracos": [
+      "Falta de informações sobre a ocupação e a renda do cliente",
+      "Falta de informações sobre os merchants e os indivíduos envolvidos nas transações",
+      "Necessidade de análise mais aprofundada das transações e da rede de relacionamentos"
+    ],
+    "ressalvas": [
+      "Adicionar informações sobre a ocupação e a renda do cliente",
+      "Incluir informações sobre os merchants e os indivíduos envolvidos nas transações",
+      "Realizar análise mais aprofundada das transações e da rede de relacionamentos antes de submeter o SAR"
+    ],
+    "risco_nao_reportar": "ALTO",
+    "risco_reportar_sem_base": "BAIXO",
+    "prazo_acao": "24h",
+    "instrucoes_finais": "A equipe deve adicionar as informações faltantes e realizar a análise mais aprofundada das transações e da rede de relacionamentos antes de submeter o SAR. Além disso, é importante garantir que todas as seções obrigatórias do COAF sejam preenchidas corretamente.",
+    "checklist_coaf": {
+      "identificacao_completa": true,
+      "descricao_operacoes": true,
+      "tipologia_identificada": true,
+      "fundamentacao_legal": true,
+      "medidas_tomadas": true,
+      "prazo_comunicacao": true
+    }
+  }
+}

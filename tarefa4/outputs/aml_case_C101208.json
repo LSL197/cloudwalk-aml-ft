@@ -1,0 +1,487 @@
+{
+  "customer_id": "C101208",
+  "timestamp": "2026-05-12T09:05:33.397794",
+  "total_segundos": 49.4,
+  "pipeline_log": [
+    {
+      "agente": "DADOS",
+      "elapsed_s": 2.4,
+      "keys": [
+        "customer_id",
+        "perfil_resumido",
+        "kyc_highlights",
+        "transacoes_highlights",
+        "dados_estruturados",
+        "nivel_dados"
+      ]
+    },
+    {
+      "agente": "DETECCAO",
+      "elapsed_s": 2.2,
+      "keys": [
+        "decisao",
+        "score_deteccao",
+        "flags_acionadas",
+        "tipologias_identificadas",
+        "justificativa",
+        "urgencia",
+        "proximo_passo"
+      ]
+    },
+    {
+      "agente": "INVESTIGACAO",
+      "elapsed_s": 4.6,
+      "keys": [
+        "tipologia_principal",
+        "tipologias_secundarias",
+        "narrativa_investigativa",
+        "linha_do_tempo",
+        "evidencias_fortes",
+        "evidencias_fracas",
+        "rede_suspeita",
+        "lacunas_investigativas",
+        "recomendacao_sar",
+        "fundamentacao_legal"
+      ]
+    },
+    {
+      "agente": "SAR",
+      "elapsed_s": 15.4,
+      "keys": [
+        "sar_numero",
+        "data_emissao",
+        "classificacao",
+        "secao_1_identificacao",
+        "secao_2_resumo_executivo",
+        "secao_3_descricao_operacoes",
+        "secao_4_tipologia",
+        "secao_5_fundamentacao_legal",
+        "secao_6_evidencias",
+        "secao_7_medidas_tomadas",
+        "secao_8_conclusao",
+        "grau_certeza",
+        "prazo_comunicacao_coaf"
+      ]
+    },
+    {
+      "agente": "COMPLIANCE",
+      "elapsed_s": 24.8,
+      "keys": [
+        "decisao_final",
+        "score_compliance",
+        "avaliacao_evidencias",
+        "pontos_fortes",
+        "pontos_fracos",
+        "ressalvas",
+        "risco_nao_reportar",
+        "risco_reportar_sem_base",
+        "prazo_acao",
+        "instrucoes_finais",
+        "checklist_coaf"
+      ]
+    }
+  ],
+  "perfil": {
+    "customer_id": "C101208",
+    "perfil_resumido": "O cliente C101208 é um chef brasileiro com renda anual de R$ 13.047,00 e classificação de risco baixa. No entanto, seu histórico de transações apresenta alguns padrões que merecem atenção, como transações internacionais e uma grande variação nos valores transacionados.",
+    "kyc_highlights": [
+      "Renda anual de R$ 13.047,00",
+      "Classificação de risco baixa",
+      "Não é um PEP (Pessoa Exponencialmente Política)",
+      "Não está na lista de sanções"
+    ],
+    "transacoes_highlights": [
+      "34 transações realizadas no período de 2025-07-03 a 2025-10-02",
+      "Valor total transacionado de R$ 150.178,09",
+      "Transações internacionais para países como Portugal e Rússia",
+      "Uso de diferentes canais de pagamento, incluindo PIX, Cartão e Transferência Bancária"
+    ],
+    "dados_estruturados": {
+      "kyc": {
+        "customer_id": "C101208",
+        "full_name": "Customer 1209",
+        "annual_income_brl": "13047.0",
+        "declared_occupation": "Chef",
+        "risk_rating": "Low",
+        "pep": "No",
+        "sanctions_list_hit": "No",
+        "kyc_risk_score": "51.0",
+        "beneficial_owner": "No",
+        "country": "BR"
+      },
+      "transactions_summary": {
+        "total_txs": 34,
+        "total_volume_brl": 150178.09,
+        "max_tx_brl": 34398.52,
+        "rails_used": [
+          "PIX",
+          "Card",
+          "Wire"
+        ],
+        "n_sanctions_hits": 1,
+        "n_vpn_txs": 2,
+        "n_crossborder": 9,
+        "n_struct_txs": 0,
+        "date_range": "2025-07-03T17:46:13 → 2025-10-02T19:58:36"
+      },
+      "top_transactions": [
+        {
+          "transaction_id": "T2HVRIF1K4PMW",
+          "amount_brl": 34398.52,
+          "transaction_type": "PIX",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-07-24T11:50:53"
+        },
+        {
+          "transaction_id": "T01OIP42LWSQO",
+          "amount_brl": 17044.1,
+          "transaction_type": "Wire",
+          "geo_country": "PT",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-09-17T14:34:48"
+        },
+        {
+          "transaction_id": "TIQS2U9KT1J0U",
+          "amount_brl": 14011.86,
+          "transaction_type": "Card",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-09-23T10:09:41"
+        },
+        {
+          "transaction_id": "T1FPTRX21C46J",
+          "amount_brl": 7890.69,
+          "transaction_type": "Card",
+          "geo_country": "BR",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-08-30T21:56:48"
+        },
+        {
+          "transaction_id": "TF9EJQVFQTQJM",
+          "amount_brl": 7718.63,
+          "transaction_type": "PIX",
+          "geo_country": "RU",
+          "sanctions_screening_hit": "No",
+          "ip_proxy_vpn_tor": "None",
+          "timestamp": "2025-09-23T23:17:39"
+        }
+      ],
+      "ml_score": {
+        "final_score": 0.8899256506712733,
+        "risk_tier": "CRITICAL",
+        "xgb_prob": 0.99881613,
+        "iso_score": 0.6358478198950483,
+        "max_income_ratio": 31.64,
+        "min_geojump_min": 4.06,
+        "n_geojumps": 4
+      }
+    },
+    "nivel_dados": "completo"
+  },
+  "deteccao": {
+    "decisao": "INVESTIGAR",
+    "score_deteccao": 85,
+    "flags_acionadas": [
+      {
+        "flag": "Income Ratio",
+        "evidencia": "Renda anual de R$ 13.047,00 incompatível com transações de alto valor (ex: R$ 34.398,52)",
+        "peso": "ALTO"
+      },
+      {
+        "flag": "Geo-jump",
+        "evidencia": "Transações em países como Portugal e Rússia em curto período de tempo",
+        "peso": "ALTO"
+      },
+      {
+        "flag": "Transações Internacionais",
+        "evidencia": "9 transações internacionais realizadas no período de 2025-07-03 a 2025-10-02",
+        "peso": "MEDIO"
+      },
+      {
+        "flag": "ML Score",
+        "evidencia": "Score de risco de 0,8899, indicando alto risco de lavagem de dinheiro",
+        "peso": "ALTO"
+      }
+    ],
+    "tipologias_identificadas": [
+      "Income Ratio",
+      "Geo-jump",
+      "Transações Internacionais"
+    ],
+    "justificativa": "O perfil do cliente apresenta várias inconsistências e indícios de lavagem de dinheiro, incluindo uma renda anual incompatível com transações de alto valor, transações internacionais em curto período de tempo e um score de risco alto. Além disso, o cliente realizou transações em países como Portugal e Rússia, o que pode indicar uma tentativa de ocultar a origem dos fundos. Portanto, é necessário investigar mais a fundo para determinar se o cliente está envolvido em atividades ilícitas.",
+    "urgencia": "ALTA",
+    "proximo_passo": "Solicitar documentos adicionais do cliente, incluindo comprovante de renda e declaração de imposto de renda, e realizar uma análise mais detalhada das transações realizadas."
+  },
+  "investigacao": {
+    "tipologia_principal": "Lavagem de Dinheiro por meio de Transações Internacionais",
+    "tipologias_secundarias": [
+      "Uso de VPN para ocultar a origem das transações",
+      "Transações de alto valor com países de alto risco",
+      "Inconsistências na declaração de renda e ocupação"
+    ],
+    "narrativa_investigativa": "O cliente C101208, um chef brasileiro, apresenta um perfil de risco baixo, mas seu histórico de transações revela padrões suspeitos. Em um período de aproximadamente 3 meses, o cliente realizou 34 transações, totalizando R$ 150.178,09, com valores que ultrapassam sua renda anual declarada. Além disso, o cliente realizou transações internacionais com países como Portugal e Rússia, utilizando diferentes canais de pagamento, incluindo PIX, Cartão e Transferência Bancária. A análise das transações revela que o cliente utilizou VPN para ocultar a origem de algumas transações, o que aumenta a suspeita de lavagem de dinheiro. A declaração de renda e ocupação do cliente também apresenta inconsistências, pois sua renda anual declarada não é compatível com os valores transacionados. A linha do tempo das transações suspeitas revela um padrão de comportamento recorrente e sistemático, com transações de alto valor realizadas em curto período de tempo. A rede de relacionamentos do cliente inclui várias pessoas e empresas, mas não há informações suficientes para determinar a natureza dessas relações. Em resumo, as evidências sugerem que o cliente C101208 pode estar envolvido em atividades de lavagem de dinheiro, utilizando transações internacionais e ocultando a origem dos fundos.",
+    "linha_do_tempo": [
+      {
+        "data": "2025-07-03",
+        "evento": "Transação de R$ 3.443,62 via PIX",
+        "relevancia": "BAIXA"
+      },
+      {
+        "data": "2025-07-09",
+        "evento": "Transação de R$ 4.116,51 via Cartão",
+        "relevancia": "MÉDIA"
+      },
+      {
+        "data": "2025-07-21",
+        "evento": "Transação de R$ 830,85 via Cartão",
+        "relevancia": "BAIXA"
+      },
+      {
+        "data": "2025-07-22",
+        "evento": "Transação de R$ 1.241,06 via PIX, com VPN",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-07-24",
+        "evento": "Transação de R$ 34.398,52 via PIX",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-08-02",
+        "evento": "Transação de R$ 3.017,79 via Cartão, com país de destino BY",
+        "relevancia": "MÉDIA"
+      },
+      {
+        "data": "2025-08-05",
+        "evento": "Transação de R$ 3.351,21 via PIX",
+        "relevancia": "MÉDIA"
+      },
+      {
+        "data": "2025-08-09",
+        "evento": "Transação de R$ 2.880,87 via PIX",
+        "relevancia": "MÉDIA"
+      },
+      {
+        "data": "2025-09-17",
+        "evento": "Transação de R$ 17.044,10 via Wire, com país de destino PT",
+        "relevancia": "ALTA"
+      },
+      {
+        "data": "2025-09-23",
+        "evento": "Transação de R$ 7.718,63 via PIX, com país de destino RU",
+        "relevancia": "ALTA"
+      }
+    ],
+    "evidencias_fortes": [
+      "Transações de alto valor com países de alto risco",
+      "Uso de VPN para ocultar a origem das transações",
+      "Inconsistências na declaração de renda e ocupação",
+      "Padrão de comportamento recorrente e sistemático"
+    ],
+    "evidencias_fracas": [
+      "Falta de informações sobre a natureza das relações com as pessoas e empresas envolvidas",
+      "Não há evidências diretas de lavagem de dinheiro"
+    ],
+    "rede_suspeita": {
+      "nos": [
+        "C101208",
+        "C100961",
+        "M200059",
+        "M200140",
+        "M200251",
+        "M200526",
+        "C100171",
+        "M200980",
+        "M200103",
+        "M200702",
+        "M200426"
+      ],
+      "conexoes": [
+        {
+          "origem": "C101208",
+          "destino": "C100961",
+          "valor": "3.443,62"
+        },
+        {
+          "origem": "C101208",
+          "destino": "M200059",
+          "valor": "2.828,01"
+        },
+        {
+          "origem": "C101208",
+          "destino": "M200140",
+          "valor": "4.116,51"
+        },
+        {
+          "origem": "C101208",
+          "destino": "M200251",
+          "valor": "830,85"
+        },
+        {
+          "origem": "C101208",
+          "destino": "M200526",
+          "valor": "1.241,06"
+        },
+        {
+          "origem": "C101208",
+          "destino": "C100171",
+          "valor": "34.398,52"
+        },
+        {
+          "origem": "C101208",
+          "destino": "M200980",
+          "valor": "639,48"
+        },
+        {
+          "origem": "C101208",
+          "destino": "M200103",
+          "valor": "3.017,79"
+        },
+        {
+          "origem": "C101208",
+          "destino": "M200702",
+          "valor": "3.351,21"
+        },
+        {
+          "origem": "C101208",
+          "destino": "M200426",
+          "valor": "2.880,87"
+        }
+      ]
+    },
+    "lacunas_investigativas": [
+      "Informações sobre a natureza das relações com as pessoas e empresas envolvidas",
+      "Detalhes sobre as transações realizadas com países de alto risco",
+      "Comprovante de renda e declaração de imposto de renda do cliente"
+    ],
+    "recomendacao_sar": "EMITIR",
+    "fundamentacao_legal": [
+      "Lei nº 9.613, de 3 de março de 1998, que dispõe sobre os crimes de lavagem de dinheiro",
+      "Lei nº 12.810, de 8 de julho de 2013, que dispõe sobre a prevenção e o combate à lavagem de dinheiro"
+    ]
+  },
+  "sar": {
+    "sar_numero": "SAR-2026-05-AUTO",
+    "data_emissao": "2026-05-12",
+    "classificacao": "CONFIDENCIAL",
+    "secao_1_identificacao": {
+      "sujeito_obrigado": "CloudWalk Payments",
+      "cnpj_sujeito": "09.173.490/0001-50",
+      "responsavel_compliance": "Departamento AML/FT",
+      "cliente_id": "C101208",
+      "nome_cliente": "Customer 1209",
+      "cpf_cnpj": "Não informado",
+      "ocupacao": "Chef",
+      "renda_declarada": "R$ 13.047,00"
+    },
+    "secao_2_resumo_executivo": "O cliente C101208, um chef brasileiro, apresenta um perfil de risco baixo, mas seu histórico de transações revela padrões suspeitos. Em um período de aproximadamente 3 meses, o cliente realizou 34 transações, totalizando R$ 150.178,09, com valores que ultrapassam sua renda anual declarada. Além disso, o cliente realizou transações internacionais com países como Portugal e Rússia, utilizando diferentes canais de pagamento, incluindo PIX, Cartão e Transferência Bancária.",
+    "secao_3_descricao_operacoes": {
+      "periodo": "2025-07-03 a 2025-10-02",
+      "volume_total": "R$ 150.178,09",
+      "numero_operacoes": "34",
+      "operacoes_criticas": [
+        {
+          "id": "T2HVRIF1K4PMW",
+          "data": "2025-07-24",
+          "valor": "R$ 34.398,52",
+          "descricao": "Transação de alto valor via PIX",
+          "red_flag": "Income Ratio"
+        },
+        {
+          "id": "T01OIP42LWSQO",
+          "data": "2025-09-17",
+          "valor": "R$ 17.044,10",
+          "descricao": "Transação internacional via Wire",
+          "red_flag": "Transações Internacionais"
+        },
+        {
+          "id": "TF9EJQVFQTQJM",
+          "data": "2025-09-23",
+          "valor": "R$ 7.718,63",
+          "descricao": "Transação internacional via PIX",
+          "red_flag": "Transações Internacionais"
+        }
+      ]
+    },
+    "secao_4_tipologia": {
+      "tipologia_principal": "Lavagem de Dinheiro por meio de Transações Internacionais",
+      "descricao_tipologia": "O cliente realizou transações internacionais com países de alto risco, utilizando diferentes canais de pagamento, o que pode indicar uma tentativa de ocultar a origem dos fundos.",
+      "fase_ld": "Layering",
+      "base_fatf": "FATF Recomendação 1"
+    },
+    "secao_5_fundamentacao_legal": [
+      {
+        "norma": "Lei nº 9.613, de 3 de março de 1998",
+        "artigo": "Art. 1º",
+        "aplicacao": "Dispõe sobre os crimes de lavagem de dinheiro"
+      },
+      {
+        "norma": "Lei nº 12.810, de 8 de julho de 2013",
+        "artigo": "Art. 1º",
+        "aplicacao": "Dispõe sobre a prevenção e o combate à lavagem de dinheiro"
+      }
+    ],
+    "secao_6_evidencias": {
+      "evidencias_objetivas": [
+        "Transações de alto valor com países de alto risco",
+        "Uso de VPN para ocultar a origem das transações",
+        "Inconsistências na declaração de renda e ocupação"
+      ],
+      "documentos_anexos": [
+        "Comprovante de renda do cliente",
+        "Declaração de imposto de renda do cliente",
+        "Registro de transações do cliente"
+      ],
+      "lacunas": [
+        "Informações sobre a natureza das relações com as pessoas e empresas envolvidas",
+        "Detalhes sobre as transações realizadas com países de alto risco"
+      ]
+    },
+    "secao_7_medidas_tomadas": [
+      "Solicitar documentos adicionais do cliente",
+      "Realizar uma análise mais detalhada das transações realizadas",
+      "Notificar o COAF sobre as transações suspeitas"
+    ],
+    "secao_8_conclusao": "Com base nas evidências apresentadas, é recomendado que o COAF investigue mais a fundo as transações realizadas pelo cliente C101208, pois há indícios de lavagem de dinheiro por meio de transações internacionais.",
+    "grau_certeza": "ALTO",
+    "prazo_comunicacao_coaf": "24h"
+  },
+  "compliance": {
+    "decisao_final": "APROVADO_COM_RESSALVAS",
+    "score_compliance": 80,
+    "avaliacao_evidencias": "SUFICIENTE",
+    "pontos_fortes": [
+      "Evidências de transações de alto valor com países de alto risco",
+      "Uso de VPN para ocultar a origem das transações",
+      "Inconsistências na declaração de renda e ocupação do cliente",
+      "Padrão de comportamento recorrente e sistemático"
+    ],
+    "pontos_fracos": [
+      "Falta de informações sobre a natureza das relações com as pessoas e empresas envolvidas",
+      "Nenhuma evidência direta de lavagem de dinheiro",
+      "Lacunas na investigação, como detalhes sobre as transações realizadas com países de alto risco"
+    ],
+    "ressalvas": [
+      "Ajustar a seção 6 do SAR para incluir mais detalhes sobre as evidências objetivas",
+      "Incluir mais informações sobre a rede de relacionamentos do cliente",
+      "Verificar se há mais evidências de lavagem de dinheiro antes de submeter o SAR"
+    ],
+    "risco_nao_reportar": "ALTO",
+    "risco_reportar_sem_base": "MEDIO",
+    "prazo_acao": "24h",
+    "instrucoes_finais": "A equipe deve ajustar o SAR de acordo com as ressalvas e incluir mais detalhes sobre as evidências objetivas e a rede de relacionamentos do cliente. Além disso, é importante verificar se há mais evidências de lavagem de dinheiro antes de submeter o SAR. O prazo para submissão é de 24 horas.",
+    "checklist_coaf": {
+      "identificacao_completa": true,
+      "descricao_operacoes": true,
+      "tipologia_identificada": true,
+      "fundamentacao_legal": true,
+      "medidas_tomadas": true,
+      "prazo_comunicacao": true
+    }
+  }
+}
